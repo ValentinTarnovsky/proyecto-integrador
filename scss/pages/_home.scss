@@ -1,2 +1,54 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
+
+.container {
+    .container__slide {
+        position: relative;
+        z-index: 1;
+        max-width: 52rem;
+        margin: 0 auto;
+    }
+    .container__slide__img {
+        display: flex;
+        aspect-ratio: 14 / 5;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    }
+    
+    .container__slide__img::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .container__slide__img img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+    }
+    
+    .container__slide__nav {
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        z-index: 1;
+        bottom: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    
+    .container__slide__nav a {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: var.$colorGrey;
+        opacity: 0.75;
+        transition: opacity ease 250ms;
+    }
+    
+    .container__slide__nav a:hover {
+        opacity: 1;
+    }
+}
+
