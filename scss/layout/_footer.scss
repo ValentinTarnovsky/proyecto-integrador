@@ -1,0 +1,34 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.footer {
+    grid-area: footer;
+    background-color: var.$color04;
+    margin-top: auto;
+    border-top: 1px solid var.$color01;
+
+
+    a {
+        color: var.$colorDarkGrey;
+        font-size: 0.6rem;
+        padding: 0 1rem;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        color: var.$colorGrey;
+    }
+
+    .container {
+        color: var.$colorDarkGrey;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 0.6rem;
+        padding: 0.5rem;
+        color: var.$colorDarkGrey;
+    }
+}

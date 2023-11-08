@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+body {
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    background-color: var.$colorGrey;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    width: 100vw;
+}

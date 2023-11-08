@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.navbar {
+    .navbar__list {
+        display: flex;
+        flex-direction: row;
+        padding-right: 1rem;
+
+        li {
+            padding-left: 1.5rem;
+
+            a {
+                color: var.$colorWhite;
+                width: 100%;
+                position: relative;
+            }
+
+            a:hover {
+                color: var.$color01;
+            }
+
+            a:active {
+                color: var.$color01Active;
+            }
+
+            a:after {
+                content: "";
+                position: absolute;
+                background-color: var.$color01;
+                height: 1.5px;
+                width: 0%;
+                left: 0;
+                bottom: -2px;
+                transition: 0.3s;
+            }
+
+            a:hover::after {
+                width: 100%;
+            }
+
+            .navbar__list--active {
+                color: var.$color01;
+            }
+        }
+    }
+}
