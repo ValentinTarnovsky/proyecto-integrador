@@ -32,21 +32,32 @@
     </header>
 
     <main class="main">
-        <section class="container">
-            <div class="container__slide">
-                <div class="container__slide__img">
-                    <img id="slide-1" src="./images/gallery/Imagen1.jpg" alt="">
-                    <img id="slide-2" src="./images/gallery/Imagen2.jpg" alt="">
-                    <img id="slide-3" src="./images/gallery/Imagen3.png" alt="">
-                    <img id="slide-4" src="./images/gallery/Imagen4.jpg" alt="">
+        <div class="--empty"></div>
+        <section class="slider">
+            <div class="slider__list">
+                <div class="slider__item">
+                    <img src="./images/gallery/img1.jpg" alt="">
                 </div>
-                <div class="container__slide__nav">
-                    <a href="#slide-1"></a>
-                    <a href="#slide-2"></a>
-                    <a href="#slide-3"></a>
-                    <a href="#slide-4"></a>
+                <div class="slider__item">
+                    <img src="./images/gallery/img2.jpg" alt="">
+                </div>
+                <div class="slider__item">
+                    <img src="./images/gallery/img3.jpg" alt="">
+                </div>
+                <div class="slider__item">
+                    <img src="./images/gallery/img4.jpg" alt="">
                 </div>
             </div>
+            <div class="slider__buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <ul class="slider__dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </section>
         <section>
             <h3>Galeria de Productos</h3>
@@ -102,7 +113,7 @@
             </div>
         </div>
         <div class="copyright">
-            <span>&copy;2023 Todos los derechos reservados.</span>
+            <span>Copyright &copy; 1999-2023 TrendStore S.A.</span>
         </div>
     </footer>
 
