@@ -1,2 +1,223 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
+
+
+.store {
+    margin: 3rem auto;
+
+    // width: 100%;
+    // height: 100vh;
+    // height: fit-content;
+    h2.sectionTitle {
+        width: 100%;
+        letter-spacing: 1.5px;
+
+        a {
+            font-weight: 300;
+            font-size: 1rem;
+            padding-left: 0.5rem;
+            color: var.$colorLink;
+        }
+
+        a:hover {
+            color: var.$colorLinked;
+        }
+    }
+
+    .store__guarantee {
+        @include mix.shadowSmall();
+        border-radius: var.$borderRadius;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+        position: relative;
+
+        .item {
+            padding: 1rem;
+            text-align: center;
+            height: fit-content;
+            width: 100%;
+
+            img {
+                // width: 15%;
+                height: 3.5rem;
+            }
+
+            h2 {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .item:nth-child(2)::before,
+        .item:nth-child(3)::before {
+            background-color: #e2e2e2;
+            content: "";
+            display: block;
+            height: 50%;
+            width: 1px;
+            position: absolute;
+            top: 25%;
+        }
+    }
+
+    .store__browser {
+        @include mix.shadowSmall();
+        border-radius: var.$borderRadius;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin: 3rem auto;
+        padding: 0.4rem;
+        transition: all 0.3s;
+
+        .browser {
+            width: 35%;
+
+            form {
+                position: relative;
+            }
+
+            input {
+                width: 100%;
+                height: 100%;
+                display: block;
+                border-radius: var.$borderRadius;
+                font-size: 1.4rem;
+                padding: 8px 50px 8px 15px;
+                border: 1px solid var.$color01;
+            }
+
+            input:focus {
+                outline: 1px solid var.$color01;
+            }
+
+            button {
+                position: absolute;
+                top: 2px;
+                right: 0;
+                width: 3rem;
+                height: 100%;
+                cursor: pointer;
+                border: none;
+                background: none;
+            }
+
+            button span {
+                color: rgb(93, 94, 95);
+            }
+
+            button:hover span {
+                color: var.$color01;
+            }
+
+            button::before {
+                background-color: #e2e2e2;
+                content: "";
+                display: block;
+                height: 50%;
+                width: 1px;
+                position: absolute;
+                top: 20%;
+            }
+        }
+
+        .cart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.6rem;
+            cursor: pointer;
+            padding: 0.3rem 0.8rem;
+            border-radius: var.$borderRadius;
+        }
+
+        .cart:hover {
+            color: var.$color01;
+            border: 1px solid var.$color01;
+        }
+    }
+
+    .store__browser:focus-within {
+        @include mix.shadow();
+    }
+
+    .store__products,
+    .store__offers {
+        width: 100%;
+        height: fit-content;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fill, minmax(18rem, 18rem));
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 1rem;
+        position: relative;
+
+        .store__card {
+            @include mix.shadowSmall();
+            border-radius: var.$borderRadius;
+            width: 18rem;
+            height: 25rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            position: relative;
+            transition: all 0.3s;
+
+            img {
+                margin: 0 0 0.5rem 0;
+                height: 12rem;
+                object-fit: contain;
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                font-weight: 300;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            .cardButton {
+                position: absolute;
+                bottom: 1rem;
+                left: 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: end;
+                width: 100%;
+            }
+        }
+
+        .store__card:hover {
+            @include mix.shadow();
+            transform: scale(1.004);
+        }
+
+    }
+    .store__offers {
+        .store__card {
+            span {
+                color: rgb(93, 94, 95);
+                text-decoration: line-through;
+            }
+            p {
+                b {
+                    color: #4abf84;
+                    font-weight: 300;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

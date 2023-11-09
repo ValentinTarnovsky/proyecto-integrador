@@ -16,7 +16,7 @@
         left: 0;
         top: 0;
         display: flex;
-        transition: 1s;
+        transition: 1.3s;
 
         img {
             width: 100vw;
@@ -33,6 +33,7 @@
         width: 96%;
         display: flex;
         justify-content: space-between;
+        visibility: hidden;
 
         button {
             width: 2.5rem;
@@ -66,11 +67,15 @@
             margin: 10px;
             border-radius: 20px;
             transition: 0.5s;
-
+            cursor: pointer;
         }
 
         li.active {
             width: 30px;
         }
     }
+}
+
+.slider:hover>.slider__buttons {
+    visibility: visible;
 }

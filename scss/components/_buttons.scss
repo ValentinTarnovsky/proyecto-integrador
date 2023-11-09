@@ -1,2 +1,36 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
+
+.button--add {
+    width: 40%;
+    cursor: pointer;
+    height: 2rem;
+    border-radius: 3px;
+    border: none;
+    border: 1px solid lightgreen;
+    background-color: var.$colorAdd;
+    color: var.$colorGrey;
+    font-weight: bold;
+}
+
+.button--add:hover {
+    border: 1px solid rgb(0, 204, 0);
+    background-color: rgb(103, 228, 103);
+}
+
+.button--remove {
+    width: 40%;
+    cursor: pointer;
+    height: 2rem;
+    border-radius: 3px;
+    border: none;
+    border: 1px solid red;
+    background-color: var.$colorRemove;
+    color: var.$colorGrey;
+    font-weight: bold;
+}
+
+.button--remove:hover {
+    border: 1px solid rgb(255, 88, 88);
+    background-color: #ff8e7a;
+}
