@@ -11,6 +11,7 @@
     background-color: var.$colorAdd;
     color: var.$colorGrey;
     font-weight: bold;
+    visibility: hidden;
 }
 
 .button--add:hover {
@@ -28,9 +29,15 @@
     background-color: var.$colorRemove;
     color: var.$colorGrey;
     font-weight: bold;
+    visibility: hidden;
 }
 
 .button--remove:hover {
     border: 1px solid rgb(255, 88, 88);
     background-color: #ff8e7a;
+}
+
+.button--remove:active,
+.button--add:active {
+    transform: translateY(1.5px)
 }

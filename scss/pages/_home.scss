@@ -8,7 +8,7 @@
     // width: 100%;
     // height: 100vh;
     // height: fit-content;
-    h2.sectionTitle {
+    h2.section__title {
         width: 100%;
         letter-spacing: 1.5px;
 
@@ -42,7 +42,6 @@
             width: 100%;
 
             img {
-                // width: 15%;
                 height: 3.5rem;
             }
 
@@ -78,10 +77,14 @@
         transition: all 0.3s;
 
         .browser {
-            width: 35%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
 
             form {
                 position: relative;
+                width: 40%;
             }
 
             input {
@@ -92,10 +95,6 @@
                 font-size: 1.4rem;
                 padding: 8px 50px 8px 15px;
                 border: 1px solid var.$color01;
-            }
-
-            input:focus {
-                outline: 1px solid var.$color01;
             }
 
             button {
@@ -126,9 +125,13 @@
                 position: absolute;
                 top: 20%;
             }
+            input:focus {
+                outline: 1px solid var.$color01;
+            }
         }
 
         .cart {
+            margin-left: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -166,7 +169,7 @@
             @include mix.shadowSmall();
             border-radius: var.$borderRadius;
             width: 18rem;
-            height: 25rem;
+            height: 23rem;
             padding: 1rem;
             margin-bottom: 2rem;
             position: relative;
@@ -204,13 +207,19 @@
             transform: scale(1.004);
         }
 
+        .store__card:hover .button--add,
+        .store__card:hover .button--remove {
+            visibility: visible;
+        }
     }
+
     .store__offers {
         .store__card {
             span {
                 color: rgb(93, 94, 95);
                 text-decoration: line-through;
             }
+
             p {
                 b {
                     color: #4abf84;
