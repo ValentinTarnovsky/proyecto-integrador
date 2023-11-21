@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Valentin Tarnovsky" />
+    <meta name="author" content="Valentin Tarnovsky">
     <meta name="description" content="Integrative Project I, Education IT. E-Commerce of technological products.">
     <meta name="keywords"
         content="Tecnología, Gadgets, Electrónica, Dispositivos, Computadoras, Móviles, Accesorios tecnológicos, Innovación, Compras en línea, Tienda de electrónica, Ofertas tecnológicas, Electrónica de consumo, Audio y video, Smartphones, Tablets, Portátiles, Cámaras, Auriculares, Gaming, Componentes informáticos, Smartwatches, Domótica, Energía renovable, Realidad virtual, Impresoras, Drones, Redes y conectividad, Seguridad tecnológica, E-commerce de tecnología, Envío rápido">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="./css/icomoon.css">
 
     <title>TrendStore | Store</title>
@@ -33,7 +33,7 @@
 
     <main class="main">
         <div class="--empty"></div>
-        <section class="slider">
+        <div class="slider">
             <div class="slider__list">
                 <div class="slider__item">
                     <img src="./images/gallery/img1.jpg" alt="Slider image iPhone 15">
@@ -50,8 +50,8 @@
             </div>
             <div class="slider__buttons">
                 <button id="prev">
-                    < </button>
-                        <button id="next">></button>
+                    - </button>
+                        <button id="next">+</button>
             </div>
             <ul class="slider__dots">
                 <li class="active"></li>
@@ -59,7 +59,7 @@
                 <li></li>
                 <li></li>
             </ul>
-        </section>
+        </div>
         <section class="store">
             <div class="store__guarantee">
                 <div class="item">
@@ -92,6 +92,9 @@
                     <span class="material-symbols-outlined">shopping_cart</span>
                     <h2>0</h2>
                 </div>
+            </div>
+            <div class="store__addproduct">
+                <a class="modal-open add--product" href="#id-modal" title="Abrir ventana modal">Add Product</a>
             </div>
             <div class="store__offers">
                 <h2 class="section__title">Offers <a href="#">View all</a></h2>
@@ -219,6 +222,37 @@
                         <button class="button--add">Add</button>
                         <button class="button--remove">Remove</button>
                     </div>
+                </div>
+            </div>
+            <div class="modal" id="id-modal">
+                <a class="modal-area" href="#"></a>
+                <div class="modal-content">
+                    <a class="modal-exit" href="#" title="Cerrar ventana modal">X</a>
+
+                    <form>
+                        <label for="title">Product title:</label>
+                        <input type="text" id="title" name="title" required>
+
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" required>
+
+                        <label for="stock">Stock:</label>
+                        <input type="number" id="stock" name="stock" required>
+
+                        <label for="brand">Brand:</label>
+                        <input type="text" id="brand" name="brand" required>
+
+                        <label for="category">Category:</label>
+                        <input type="text" id="category" name="category" required>
+
+                        <label for="product_description">Product description:</label>
+                        <textarea id="product_description" name="product_description" rows="4" required></textarea>
+
+                        <label for="product_images">Product Images:</label>
+                        <input type="file" id="product_images" name="product_images" accept="image/*" required>
+
+                        <input type="submit" value="Add Product">
+                    </form>
                 </div>
             </div>
         </section>

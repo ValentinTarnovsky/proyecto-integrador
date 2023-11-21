@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Yesteryear&display=swap");
 * {
   box-sizing: border-box;
@@ -62,6 +63,155 @@ img {
 .button--remove:active,
 .button--add:active {
   transform: translateY(1.5px);
+}
+
+.add--product {
+  cursor: pointer;
+  height: 2.5rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 3px;
+  border: none;
+  border: 1px solid #3f82ba;
+  background-color: #1E90FF;
+  color: #f5f5f5;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+.add--product:hover {
+  border: 1px solid #031c30;
+  background-color: #58abff;
+  color: #FFFFFF;
+}
+
+.store__addproduct {
+  position: sticky;
+}
+
+.modal-open:link,
+.modal-open:visited {
+  color: black;
+}
+
+.modal-open:hover {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* Esto oculta el modal por defecto */
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+/* Esto cierra el modal al hacer clic por fuera */
+.modal-area {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: fixed;
+}
+
+/* Esto abre el modal al hacer clic en el vínculo */
+.modal:target {
+  visibility: visible;
+}
+
+.modal-content {
+  padding: 1rem;
+  height: fit-content;
+  width: 20%;
+  position: relative;
+  top: 20vh;
+  left: 35vw;
+  border: 1px solid #031c30;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+.modal-content .modal-exit {
+  font-weight: bolder;
+  text-decoration: none;
+  color: #031c30;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  z-index: 3;
+}
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.modal-content form label {
+  padding-left: 0.5rem;
+}
+.modal-content form .form-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.modal-content form .form-flex div:first-of-type {
+  padding-right: 1rem;
+}
+.modal-content form .form-flex div:last-of-type {
+  padding-left: 1rem;
+}
+.modal-content form input:focus,
+.modal-content form textarea:focus {
+  outline: none;
+  outline: 1px solid #75d3ff;
+}
+.modal-content form input[type=text],
+.modal-content form input[type=number],
+.modal-content form textarea {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #75d3ff;
+  border-radius: 3px;
+  padding: 0 0.4rem;
+  font-size: 1.2rem;
+}
+.modal-content form input[type=number]::-webkit-inner-spin-button,
+.modal-content form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.modal-content form input[type=submit] {
+  cursor: pointer;
+  height: 2.5rem;
+  border-radius: 3px;
+  border: none;
+  border: 1px solid #3f82ba;
+  background-color: #1E90FF;
+  color: #f5f5f5;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+.modal-content form input[type=submit]:hover {
+  border: 1px solid #031c30;
+  background-color: #75d3ff;
+}
+.modal-content form input[type=file] {
+  color: transparent;
+  font-size: 10;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  height: 2.5rem;
+  border-radius: 3px;
+  font-size: 1.2rem;
+}
+.modal-content form #product_description {
+  padding: 0.4rem;
+  height: 4rem;
+  resize: vertical;
 }
 
 .slider {
@@ -469,7 +619,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin: 3rem auto;
+  margin: 3rem auto 1.5rem;
   padding: 0.4rem;
   transition: all 0.3s;
 }
@@ -537,6 +687,9 @@ body {
 .store .store__browser:focus-within {
   background-color: #FFFFFF;
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.45);
+}
+.store .store__addproduct {
+  margin-bottom: 1.5rem;
 }
 .store .store__products,
 .store .store__offers {
