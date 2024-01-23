@@ -1,2 +1,4 @@
-E-Commers Project for my bootcamp! [Only front-development]
+E-Commers Project for my bootcamp! 
+[Only front-development]
+
 Valentin Tarnovsky.
