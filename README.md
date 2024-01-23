@@ -1,3 +1,3 @@
-E-Commers Proyect for my bootcamp!
+E-Commers Project for my bootcamp!
 
 Valentin Tarnovsky.
